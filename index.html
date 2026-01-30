@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Yama - Full Version</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header class="main-header p-4 bg-white shadow-md sticky top-0 z-50">
+        <div class="logo"></div>
+        <nav class="hidden md:flex space-x-2" id="nav-menu">
+            <a class="border rounded p-2 hover:bg-red-500 hover:text-white transition" href="#home">Home</a>
+            <a class="border rounded p-2 hover:bg-red-500 hover:text-white transition" href="#profile">Our Profile</a>
+            <a class="border rounded p-2 hover:bg-red-500 hover:text-white transition" href="#portfolio">Our Portfolio</a>
+            <a class="border rounded p-2 hover:bg-red-500 hover:text-white transition" href="#headquarters">Headquarters</a>
+            <a class="border rounded p-2 hover:bg-red-500 hover:text-white transition" href="#message">Message Us</a>
+        </nav>
+        <div class="md:hidden cursor-pointer text-2xl" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <main>
+        <section id="home" class="min-h-[500px] flex flex-col items-center justify-center text-center px-4">
+            <h2 class="text-4xl font-bold mb-4" id="welcome-speech">Welcome to Our Website</h2>
+            <p class="text-lg text-gray-600">Solusi digital terbaik untuk transformasi bisnis Anda.</p>
+        </section>
+
+        <hr>
+
+        <section id="profile" class="py-16 px-8 bg-white">
+            <h2 class="text-3xl font-bold text-center mb-8">Our Profile</h2>
+            <div class="max-w-5xl mx-auto">
+                <div class="mb-10 h-64 bg-cover bg-center rounded-xl shadow-lg" style="background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?w=1200');"></div>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="p-6 bg-gray-50 rounded-lg border-l-8 border-red-500 shadow-sm">
+                        <h3 class="font-bold text-xl mb-3">About the Company</h3>
+                        <p>Bersama Company adalah pionir teknologi yang berfokus pada inovasi digital dan efisiensi bisnis berskala global.</p>
+                    </div>
+                    <div class="p-6 bg-gray-50 rounded-lg border-l-8 border-red-500 shadow-sm">
+                        <h3 class="font-bold text-xl mb-3">Vision & Mission</h3>
+                        <p>Menjadi pemimpin transformasi digital dengan misi memberikan nilai tambah melalui kreativitas tanpa batas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="portfolio" class="py-16 px-8 bg-slate-50">
+            <h2 class="text-3xl font-bold text-center mb-10">Our Portfolio</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-4 bg-white rounded-lg shadow">
+                    <img src="img/Game Programmer.jpg" class="w-full rounded mb-4" alt="Web Dev">
+                    <h4 class="font-bold">Programmer Game</h4>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow">
+                    <img src="img/Data Analysis.jpg" class="w-full rounded mb-4" alt="Mobile App">
+                    <h4 class="font-bold">Data Analysis</h4>
+                </div>
+                <div class="p-4 bg-white rounded-lg shadow">
+                    <img src="img/Data Entry.jpg" class="w-full rounded mb-4" alt="Cloud">
+                    <h4 class="font-bold">Data Entry</h4>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="headquarters" class="py-16 px-8 bg-white text-center">
+            <h2 class="text-3xl font-bold mb-10">Our Headquarters</h2>
+            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center">
+                    <div class="hq-circle border-4 border-red-500" style="background-image: url('img/sulthan-auliya-_oeQmY1zcBE-unsplash.jpg');"></div>
+                    <p class="font-bold text-xl mt-4">Jakarta</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="hq-circle border-4 border-red-500" style="background-image: url('img/neermana-studio-SYKYxuT2o5w-unsplash.jpg');"></div>
+                    <p class="font-bold text-xl mt-4">Bandung</p>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="hq-circle border-4 border-red-500" style="background-image: url('img/kristian-tandjung-8wubO8zG8vg-unsplash.jpg');"></div>
+                    <p class="font-bold text-xl mt-4">Surabaya</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="message" class="py-16 px-8 bg-slate-50">
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded shadow-lg border">
+                    <h2 class="text-2xl font-bold mb-6">Message Us</h2>
+                    <form id="messageForm" class="space-y-4 text-left">
+                        <div>
+                            <label class="block font-bold">Full Name</label>
+                            <input type="text" id="sender-name" class="w-full p-2 border rounded" placeholder="Your Name" required>
+                        </div>
+                        <div>
+                            <label class="block font-bold">Birth Date</label>
+                            <input type="date" id="birth-date" class="w-full p-2 border rounded" required>
+                        </div>
+                        <div>
+                            <label class="block font-bold">Gender</label>
+                            <label class="mr-4"><input type="radio" name="gender" value="Male" checked> Male</label>
+                            <label><input type="radio" name="gender" value="Female"> Female</label>
+                        </div>
+                        <div>
+                            <label class="block font-bold">Message</label>
+                            <textarea id="message-text" rows="4" class="w-full p-2 border rounded" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-red-600 text-white font-bold rounded-lg hover:bg-red-700 transition">Send Message</button>
+                    </form>
+                </div>
+                <div class="bg-white p-8 rounded border-2 border-dashed border-gray-400">
+                    <h3 class="text-xl font-bold mb-4">Submission Summary:</h3>
+                    <div id="result-display" class="space-y-3">
+                        <p><strong>Date:</strong> <span id="res-time">-</span></p>
+                        <p><strong>Name:</strong> <span id="res-name">-</span></p>
+                        <p><strong>DOB:</strong> <span id="res-dob">-</span></p>
+                        <p><strong>Gender:</strong> <span id="res-gender">-</span></p>
+                        <p><strong>Message:</strong></p>
+                        <div class="bg-gray-100 p-4 rounded italic" id="res-msg">-</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6">
+        <p>&copy; 2024 PT Bersama Company. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
